@@ -225,3 +225,30 @@ B2: lặp qua mảng products để lấy ra từng object
 B3: lấy dữ liệu trong từng object để hiển thị ra html 
     (cập nhật nội dung bên trong div product)
 */
+
+const products = [
+  {
+    id: "1",
+    name: "Product 1",
+    brand: "Brand 1",
+    price: 1000,
+    manufacture: "Vietnam",
+    image: "https://picsum.photos/120/200",
+  },
+  {
+    id: "2",
+    name: "Product 2",
+    brand: "Brand 2",
+    price: 2000,
+    manufacture: "England",
+    image: "https://picsum.photos/120/200",
+  },
+  {
+    id: "3",
+    name: "Product 3",
+    brand: "Brand 3",
+    price: 3000,
+    manufacture: "America",
+    image: "https://picsum.photos/120/200",
+  },
+];
