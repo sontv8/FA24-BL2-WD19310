@@ -9,11 +9,17 @@ const ProductList = (props) => {
       <Header />
       <main>
         <h2>Danh sách sản phẩm</h2>
-        <div>
-          <img src="" alt="" />
-          <h2></h2>
-          <p></p>
-        </div>
+        {props.products.map((item, index) => {
+          console.log(item);
+
+          return (
+            <div key={index}>
+              <img src={item.image} alt="" style={{ width: 600 }} />
+              <h2>{item.name}</h2>
+              <p>{item.price}</p>
+            </div>
+          );
+        })}
       </main>
       <Footer />
     </>
