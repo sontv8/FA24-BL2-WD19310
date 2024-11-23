@@ -1,12 +1,19 @@
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 
-const ProductList = () => {
+const ProductList = (props) => {
+  console.log(props.products); //{myName: "sontv"}
+
   return (
     <>
       <Header />
       <main>
         <h2>Danh sách sản phẩm</h2>
+        <div>
+          <img src="" alt="" />
+          <h2></h2>
+          <p></p>
+        </div>
       </main>
       <Footer />
     </>
@@ -31,4 +38,6 @@ website
     ...
 
     react-router-dom
+
+  productList(...)
 */
