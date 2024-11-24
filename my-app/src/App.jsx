@@ -21,12 +21,23 @@ function App() {
         "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yasuo_57.jpg",
     },
   ];
+
+  const [products, setProducts] = useState(data);
+
+  const onRemove = (id) => {
+    if (confirm("Bạn có chắc chắn muốn xoá sản phẩm này không?")) {
+      const newData = data.filter((item) => {
+        return item.id != id;
+      });
+      setProducts(newData);
+    }
+  };
   return (
     <>
       <Routes>
         <Route
           path="/admin/products"
-          element={<ProductList products={data} />}
+          element={<ProductList products={products} onRemove={onRemove} />}
         />
       </Routes>
     </>

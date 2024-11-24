@@ -2,7 +2,7 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 
 const ProductList = (props) => {
-  console.log(props.products); //{myName: "sontv"}
+  console.log(props); //{myName: "sontv"}
 
   return (
     <>
@@ -22,7 +22,7 @@ const ProductList = (props) => {
           </thead>
           <tbody>
             {props.products.map((item, index) => {
-              console.log(item);
+              // console.log(item);
 
               return (
                 <tr key={index}>
@@ -33,7 +33,7 @@ const ProductList = (props) => {
                     <img src={item.image} alt="" style={{ width: 400 }} />
                   </td>
                   <td>
-                    <button>Xoá</button>
+                    <button onClick={() => props.onRemove(item.id)}>Xoá</button>
                   </td>
                 </tr>
               );
