@@ -1,0 +1,16 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Sản phẩm 1",
+      "price": 1000,
+      "image": "https://cdn.tgdd.vn/2020/07/content/Yonedatrolai-800x450.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Sản phẩm 2",
+      "price": 2000,
+      "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yasuo_57.jpg"
+    }
+  ]
+}

@@ -6,17 +6,41 @@
     <title>Document</title>
   </head>
   <body>
+    <div id="name"></div>
     <script>
-      // destructuring array
-      const myNumber = [1, 2, 3];
-      //                0,1,2
-      //   const a = myNumber[0];
-      //   const b = myNumber[1];
-      //   const c = myNumber[2];
+      /*
+        Đồng bộ
+        Bất đồng bộ
+        Xử lý bất đồng bộ
+      */
 
-      const [a] = myNumber;
+      console.log("Xin chao");
 
-      console.log(a);
+      const myPromise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          let data = {
+            name: "Nguyen Van A",
+            age: 20,
+          };
+          resolve(data);
+        }, 2000);
+      });
+
+      myPromise
+        .then((result) => {
+          console.log(result);
+          result.email = "abc@gmail.com";
+          return result;
+        })
+        .then((newData) => {
+          console.log(newData);
+        })
+        .catch((result) => {
+          console.log(result);
+        });
+
+      // console.log(data);
+      // console.log("Ket thuc");
     </script>
   </body>
 </html>
