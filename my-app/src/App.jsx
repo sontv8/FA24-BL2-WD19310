@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
@@ -7,20 +7,26 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 function App() {
   const [products, setProducts] = useState([]);
-
-  fetch("http://localhost:3000/products", {
-    method: "GET",
-  })
-    .then((response) => {
-      return response.json();
+  useEffect(() => {
+    fetch("http://localhost:3000/products", {
+      method: "GET",
     })
-    .then((data) => {
-      setProducts(data);
-    });
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        setProducts(data);
+      });
+  }, []);
 
   const onRemove = (id) => {
+    // console.log(`http://localhost:3000/products/${id}`);
+
     if (confirm("Bạn có chắc chắn muốn xoá sản phẩm này không?")) {
-      const newData = data.filter((item) => {
+      fetch(`http://localhost:3000/products/${id}`, {
+        method: "DELETE",
+      });
+      const newData = products.filter((item) => {
         return item.id != id;
       });
       setProducts(newData);
