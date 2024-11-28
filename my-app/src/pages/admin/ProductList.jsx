@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 
@@ -9,6 +10,12 @@ const ProductList = (props) => {
       <Header />
       <main>
         <h2>Danh sách sản phẩm</h2>
+        {/* <a href="/admin/products/add">
+          <button>Thêm mới sản phẩm</button>
+        </a> */}
+        <Link to={"/admin/products/add"}>
+          <button>Thêm mới sản phẩm</button>
+        </Link>
 
         <table>
           <thead>

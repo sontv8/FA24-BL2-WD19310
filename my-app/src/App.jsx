@@ -3,11 +3,13 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import ProductList from "./pages/admin/ProductList";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter, useNavigate } from "react-router-dom";
 import AddProduct from "./pages/admin/AddProduct";
 
 function App() {
   const [products, setProducts] = useState([]);
+
+  const navigate = useNavigate();
   useEffect(() => {
     fetch("http://localhost:3000/products", {
       method: "GET",
@@ -33,6 +35,24 @@ function App() {
       setProducts(newData);
     }
   };
+
+  const onAdd = (product) => {
+    fetch("http://localhost:3000/products", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(product),
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        alert("Thêm mới sản phẩm thành công");
+        setProducts([...products, data]);
+        navigate("/admin/products");
+      });
+  };
   return (
     <>
       <Routes>
@@ -41,7 +61,10 @@ function App() {
           path="/admin/products"
           element={<ProductList products={products} onRemove={onRemove} />}
         />
-        <Route path="/admin/products/add" element={<AddProduct />} />
+        <Route
+          path="/admin/products/add"
+          element={<AddProduct onAdd={onAdd} />}
+        />
       </Routes>
     </>
   );

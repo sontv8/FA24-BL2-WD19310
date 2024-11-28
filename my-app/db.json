@@ -17,6 +17,54 @@
       "name": "Product 3",
       "price": 300,
       "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Katarina_0.jpg"
+    },
+    {
+      "name": "New Product",
+      "price": "100",
+      "image": "https://lienquan.garena.vn/wp-content/uploads/2024/05/70ea305ed24716682532486c9625a8315cfe1cf6922681.jpg",
+      "id": "dg3T6X7"
+    },
+    {
+      "name": "Hello",
+      "price": "1111",
+      "image": "https://picsum.photos/200/200",
+      "id": "MBtGcKB"
+    },
+    {
+      "name": "New Product 2",
+      "price": "1000",
+      "image": "https://res.cloudinary.com/dxhgeg7vi/image/upload/v1728913413/bssu0eo9r6rqcj1cnt3i.jpg",
+      "id": "17EV8-S"
+    },
+    {
+      "name": "abcd",
+      "price": "1111",
+      "image": "https://lienquan.garena.vn/wp-content/uploads/2024/05/70ea305ed24716682532486c9625a8315cfe1cf6922681.jpg",
+      "id": "hheiIg2"
+    },
+    {
+      "name": "New Product",
+      "price": "1111",
+      "image": "abcd",
+      "id": "Nkp85xU"
+    },
+    {
+      "name": "New Product",
+      "price": "100",
+      "image": "https://picsum.photos/200/200",
+      "id": "w45kPAY"
+    },
+    {
+      "name": "New Product",
+      "price": "100",
+      "image": "https://picsum.photos/200/200",
+      "id": "UIcL7ZS"
+    },
+    {
+      "name": "New Product 1000",
+      "price": "1000",
+      "image": "https://picsum.photos/200/200",
+      "id": "gN1Aruk"
     }
   ]
 }

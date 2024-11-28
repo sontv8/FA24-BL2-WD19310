@@ -7,16 +7,30 @@
   </head>
   <body>
     <script>
+      // const product = {
+      //   id: "2",
+      //   name: "Product 2",
+      //   price: 200,
+      //   image:
+      //     "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kayn_0.jpg",
+      // };
+      // //   const name = product.name;
+      // //   const price = product.price;
+      // const { name, price, image, id } = product;
+
+      // const myName = "sontv";
+      // const myInfo = { [myName]: "abcd" };
+      // console.log(myInfo);
+
+      // spread operator ...
+
       const product = {
-        id: "2",
-        name: "Product 2",
-        price: 200,
-        image:
-          "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kayn_0.jpg",
+        id: 1,
+        name: "Product 1",
       };
-      //   const name = product.name;
-      //   const price = product.price;
-      const { name, price, image, id } = product;
+
+      const product2 = { ...product, email: "abcd@gmail.com" };
+      console.log(product2);
     </script>
   </body>
 </html>
