@@ -4,6 +4,7 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import ProductList from "./pages/admin/ProductList";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
+import AddProduct from "./pages/admin/AddProduct";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -40,6 +41,7 @@ function App() {
           path="/admin/products"
           element={<ProductList products={products} onRemove={onRemove} />}
         />
+        <Route path="/admin/products/add" element={<AddProduct />} />
       </Routes>
     </>
   );
