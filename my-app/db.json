@@ -2,8 +2,8 @@
   "products": [
     {
       "id": "1",
-      "name": "Product 1",
-      "price": 100,
+      "name": "Product 1 update",
+      "price": "100000",
       "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kindred_3.jpg"
     },
     {

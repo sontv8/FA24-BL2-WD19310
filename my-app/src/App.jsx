@@ -54,6 +54,16 @@ function App() {
         navigate("/admin/products");
       });
   };
+
+  const onUpdate = (product) => {
+    fetch(`http://localhost:3000/products/${product.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(product),
+    });
+  };
   return (
     <>
       <Routes>
@@ -66,7 +76,10 @@ function App() {
           path="/admin/products/add"
           element={<AddProduct onAdd={onAdd} />}
         />
-        <Route path="/admin/products/:id/edit" element={<UpdateProduct />} />
+        <Route
+          path="/admin/products/:id/edit"
+          element={<UpdateProduct onUpdate={onUpdate} />}
+        />
       </Routes>
     </>
   );
