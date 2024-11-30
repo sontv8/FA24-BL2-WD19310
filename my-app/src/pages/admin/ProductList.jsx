@@ -41,6 +41,9 @@ const ProductList = (props) => {
                   </td>
                   <td>
                     <button onClick={() => props.onRemove(item.id)}>Xoá</button>
+                    <Link to={`/admin/products/${item.id}/edit`}>
+                      <button>Cập nhật</button>
+                    </Link>
                   </td>
                 </tr>
               );

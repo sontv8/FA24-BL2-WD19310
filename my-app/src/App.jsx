@@ -5,6 +5,7 @@ import "./App.css";
 import ProductList from "./pages/admin/ProductList";
 import { Routes, Route, BrowserRouter, useNavigate } from "react-router-dom";
 import AddProduct from "./pages/admin/AddProduct";
+import UpdateProduct from "./pages/admin/UpdateProduct";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -65,6 +66,7 @@ function App() {
           path="/admin/products/add"
           element={<AddProduct onAdd={onAdd} />}
         />
+        <Route path="/admin/products/:id/edit" element={<UpdateProduct />} />
       </Routes>
     </>
   );
