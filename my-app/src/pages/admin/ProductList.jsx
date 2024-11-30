@@ -44,6 +44,9 @@ const ProductList = (props) => {
                     <Link to={`/admin/products/${item.id}/edit`}>
                       <button>Cập nhật</button>
                     </Link>
+                    <Link to={`/admin/products/${item.id}`}>
+                      <button>Chi tiết</button>
+                    </Link>
                   </td>
                 </tr>
               );

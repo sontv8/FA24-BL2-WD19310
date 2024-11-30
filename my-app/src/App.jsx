@@ -6,6 +6,7 @@ import ProductList from "./pages/admin/ProductList";
 import { Routes, Route, BrowserRouter, useNavigate } from "react-router-dom";
 import AddProduct from "./pages/admin/AddProduct";
 import UpdateProduct from "./pages/admin/UpdateProduct";
+import DetailProduct from "./pages/admin/DetailProduct";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -62,7 +63,12 @@ function App() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(product),
-    });
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setProducts(products.map((item) => (item.id == data.id ? data : item)));
+        navigate("/admin/products");
+      });
   };
   return (
     <>
@@ -80,6 +86,7 @@ function App() {
           path="/admin/products/:id/edit"
           element={<UpdateProduct onUpdate={onUpdate} />}
         />
+        <Route path="/admin/products/:id" element={<DetailProduct />} />
       </Routes>
     </>
   );
